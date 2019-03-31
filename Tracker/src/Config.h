@@ -1,5 +1,5 @@
 /*
-    Fiducial Tracker
+    Gimbal Tracker
 
     (C)2018 Jason Hunt nulluser@gmail.com
 

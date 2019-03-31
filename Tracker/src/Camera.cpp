@@ -61,7 +61,6 @@ Camera::Camera(Main *m, Config *c) : main(m), config(c)
 
     backprojMode = false;
     selectObject = false;
-    new_image = false;
     running = false;
     target_valid = false;
 
@@ -78,7 +77,6 @@ Camera::Camera(Main *m, Config *c) : main(m), config(c)
     InitializeCriticalSection(&image_cs);
 
     h_thread = CreateThread(0, 0, camera_thread, this, 0, &thread_id);
-
 }
 
 
@@ -163,14 +161,14 @@ DWORD WINAPI Camera::camera_thread(LPVOID lpParameter)
 
 	while(camera->running)
     {
-        double cur = get_time();
+        /*double cur = get_time();
 
         if (cur - last > 1)
         {
             last = cur;
             //console("Frames: %d\n", frames);
             frames = 0;
-        }
+        }*/
 
         camera->update();
 
@@ -184,43 +182,26 @@ DWORD WINAPI Camera::camera_thread(LPVOID lpParameter)
 // Core camera update. Get image and notify main
 void Camera::update()
 {
-    double t = get_time();
     cap >> image;
 
-    //console("Frame dt : %f\n", get_time() - t);
-
-    if( image.empty() ) return;
-
-    t = get_time();
+    if(image.empty()) return;
 
     clean_image(image, cleaned);
+
     find_target(image);
-
-    new_image = true;
-
-    //imshow( "camera Main", image );
-
 
     // Save final image for UI
     EnterCriticalSection(&image_cs);
     image.copyTo(out_image);
     LeaveCriticalSection(&image_cs);
 
-
     main->update(); // Tell main that a new frame is ready
 
-    //console("Update main rame dt : %f\n", get_time() - t);
-
-    t = get_time();
     waitKey(1); // Required for imshow update
-
-   // console("Finale dt : %f\n", get_time() - t);
 }
 
 
-
-
-// Renter opencv image to memory DC
+// Render opencv image to memory DC
 void Camera::draw_image(HDC dc, int disp_x_size, int disp_y_size)
 {
     EnterCriticalSection(&image_cs);
@@ -283,35 +264,24 @@ void Camera::set_selection(float x1, float y1, float x2, float y2)
 
         selection_valid = false;
     }
-
-
 }
 
 
-
-
-
-
-
+// Set target window for target capture
 void Camera::set_target(Rect window)
 {
     printf("Target %d %d   %d %d   \n", window.x, window.y, window.width, window.height);
 
-
     trackWindow = window;
-    //trackObject = 1; // Don't set up again, unless user selects new ROI
+
     has_target = 0;
     target_init = 1;
 
-
     selection_valid = true;
-
 }
 
 
-
-
-
+// Prepare image for object search
 void Camera::clean_image(Mat &source, Mat &cleaned)
 {
     cv::medianBlur(source, filtered_bgr, 3);
@@ -359,7 +329,7 @@ void Camera::clean_image(Mat &source, Mat &cleaned)
 }
 
 
-
+// Locate target in image
 void Camera::find_target(Mat &source)
 {
     static int hist_size[] = {16, 16, 16};
@@ -454,15 +424,9 @@ void Camera::find_target(Mat &source)
 
             circle(source, target, radius, (0, 255, 255), 2);
         }
-
-
-
-
     }
 
-
     if (!target_valid) return;
-
 
     Rect box;
 
@@ -488,16 +452,12 @@ void Camera::find_target(Mat &source)
     float y_scaled = 2*y_largest / (float) source.rows - 1;
     float r_scaled = r_largest / (float) ((source.rows + source.cols) / 2.0);
 
+    filter(target_x, x_scaled, target_filt);
+    filter(target_y, y_scaled, target_filt);
+    filter(target_r, r_scaled, target_filt);
 
 
-    target_x = target_filt * target_x + (1-target_filt) * x_scaled;
-    target_y = target_filt * target_y + (1-target_filt) * y_scaled;
-    target_r = target_filt * target_r + (1-target_filt) * r_scaled;
-
-
-   // console("P: %f %f %f\n", target_x, target_y, target_r);
-
-
+    /* Old junk */
 /*
    if (image_points(backproj) > 200)
     {
@@ -574,7 +534,6 @@ void Camera::find_target(Mat &source)
     pixels are inside the range*/
 void Camera::compute_mask_range(cv::Mat &img)
 {
-
 //         for( int i = 0; i < hsize; i++ )
                         //buf.at<Vec3b>(i) = Vec3b(saturate_cast<uchar>(i*180./hsize), 255, 255);
     float h_min_temp = h_min, h_max_temp = h_max;
@@ -588,7 +547,6 @@ void Camera::compute_mask_range(cv::Mat &img)
     float h_ave = 0;
     float s_ave = 0;
     float v_ave = 0;
-
 
     int num_points = 0;
 
@@ -612,12 +570,10 @@ void Camera::compute_mask_range(cv::Mat &img)
 
     if (num_points == 0) return;
 
-
     // hsv average of non zero points
     h_ave /= num_points;
     s_ave /= num_points;
     v_ave /= num_points;
-
 
     h_min = h_ave;    h_max = h_ave;
     s_min = s_ave;    s_max = s_ave;
@@ -625,8 +581,6 @@ void Camera::compute_mask_range(cv::Mat &img)
 
     //printf("Before Range H: %d %d  S: %d %d V: %d %d\n", h_min, h_max, s_min, s_max, v_min, v_max);
     printf("Ave H: %d  S: %d V: %d \n", (int)h_ave, (int)s_ave, (int)v_ave);
-
-
 
     float match_ratio = 0.90;
 
@@ -636,23 +590,16 @@ void Camera::compute_mask_range(cv::Mat &img)
     int s_match = 0;
     int v_match = 0;
 
-
     int max = 255;
-
-
 
     printf("Size: %d\n", img.rows*img.cols);
     printf("Match count: %d\n", match_count);
 
-
-
     while ((h_match < match_count || s_match < match_count || v_match < match_count) &&max--)
     {
-
         h_match = 0;
         s_match = 0;
         v_match = 0;
-
 
         for(int i=0; i<img.rows; i++)
         for(int j=0; j<img.cols; j++)
@@ -664,19 +611,14 @@ void Camera::compute_mask_range(cv::Mat &img)
             int s = img.at<cv::Vec3b>(i,j)[1];
             int v = img.at<cv::Vec3b>(i,j)[2];
 
-
             if (h >= h_min && h <= h_max) h_match++;
             if (s >= s_min && s <= s_max) s_match++;
             if (v >= v_min && v <= v_max) v_match++;
-
         }
-
-
 
         if (h_match < match_count) { h_min--; h_max++;};
         if (s_match < match_count) { s_min--; s_max++;};
         if (v_match < match_count) { v_min--; v_max++;};
-
 
         if (h_min < 0) h_min = 0;
         if (h_max > 255) h_max = 255;

@@ -80,9 +80,6 @@ class Camera
     bool running;
     HANDLE h_thread;
 
-    bool new_image;
-
-
     bool target_init;
     bool has_target;
 

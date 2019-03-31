@@ -40,6 +40,8 @@
 			<Add option="-l Winmm" />
 			<Add library="gdi32" />
 		</Linker>
+		<Unit filename="src/Camera.cpp" />
+		<Unit filename="src/Camera.h" />
 		<Unit filename="src/Config.cpp" />
 		<Unit filename="src/Config.h" />
 		<Unit filename="src/Gimbal.cpp" />
@@ -48,8 +50,6 @@
 		<Unit filename="src/Main.h" />
 		<Unit filename="src/PID.cpp" />
 		<Unit filename="src/PID.h" />
-		<Unit filename="src/Scanner.cpp" />
-		<Unit filename="src/Scanner.h" />
 		<Unit filename="src/Serial.cpp" />
 		<Unit filename="src/Serial.h" />
 		<Unit filename="src/Tracker.cpp" />
