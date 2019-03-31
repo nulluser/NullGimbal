@@ -1,0 +1,1206 @@
+# depslib dependency file v1.0
+1459712000 source:c:\local\files\project\opticalflow\opticalflow 4-3-2016b\main.cpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/videoio/videoio.hpp"
+	"opencv2/highgui/highgui.hpp"
+	<opencv2/highgui/highgui.hpp>
+	<opencv2/imgproc/imgproc.hpp>
+	"opencv2/video/tracking.hpp"
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+	<ctype.h>
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\video\tracking.hpp
+	"opencv2/core.hpp"
+	"opencv2/imgproc.hpp"
+
+1516756479 c:\opencv\build\x86\mingw\install\include\opencv2\core.hpp
+	"opencv2/core/cvdef.h"
+	"opencv2/core/version.hpp"
+	"opencv2/core/base.hpp"
+	"opencv2/core/cvstd.hpp"
+	"opencv2/core/traits.hpp"
+	"opencv2/core/matx.hpp"
+	"opencv2/core/types.hpp"
+	"opencv2/core/mat.hpp"
+	"opencv2/core/persistence.hpp"
+	"opencv2/core/operations.hpp"
+	"opencv2/core/cvstd.inl.hpp"
+	"opencv2/core/utility.hpp"
+	"opencv2/core/optim.hpp"
+	"opencv2/core/ovx.hpp"
+
+1518917766 c:\opencv\build\x86\mingw\install\include\opencv2\core\cvdef.h
+	"cvconfig.h"
+	<limits.h>
+	"opencv2/core/hal/interface.h"
+	"cv_cpu_dispatch.h"
+	<intrin.h>
+	<array>
+	<cstdint>
+	<stdint.h>
+
+1448038428 c:\opencv\build\x86\mingw\install\include\opencv2\hal\defs.h
+	<limits.h>
+	<emmintrin.h>
+	<pmmintrin.h>
+	<tmmintrin.h>
+	<smmintrin.h>
+	<nmmintrin.h>
+	<nmmintrin.h>
+	<popcntintrin.h>
+	<immintrin.h>
+	<immintrin.h>
+	<Intrin.h>
+	"arm_neon.h"
+	<arm_neon.h>
+	<cstdint>
+	<stdint.h>
+	<fastmath.h>
+	<cmath>
+	<math.h>
+	"tegra_round.hpp"
+	<algorithm>
+
+1519397948 c:\opencv\build\x86\mingw\install\include\opencv2\core\version.hpp
+
+1518917766 c:\opencv\build\x86\mingw\install\include\opencv2\core\base.hpp
+	"opencv2/opencv_modules.hpp"
+	<climits>
+	<algorithm>
+	"opencv2/core/cvdef.h"
+	"opencv2/core/cvstd.hpp"
+	"opencv2/core/neon_utils.hpp"
+	"opencv2/core/vsx_utils.hpp"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\core\cvstd.hpp
+	"opencv2/core/cvdef.h"
+	<cstddef>
+	<cstring>
+	<cctype>
+	<string>
+	<algorithm>
+	<utility>
+	<cstdlib>
+	<cmath>
+	"opencv2/core/ptr.inl.hpp"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\core\ptr.inl.hpp
+	<algorithm>
+
+1448038428 c:\opencv\build\x86\mingw\install\include\opencv2\hal.hpp
+	"opencv2/hal/defs.h"
+
+1448038428 c:\opencv\build\x86\mingw\install\include\opencv2\core\sse_utils.hpp
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\core\traits.hpp
+	"opencv2/core/cvdef.h"
+
+1518487453 c:\opencv\build\x86\mingw\install\include\opencv2\core\matx.hpp
+	"opencv2/core/cvdef.h"
+	"opencv2/core/base.hpp"
+	"opencv2/core/traits.hpp"
+	"opencv2/core/saturate.hpp"
+	<initializer_list>
+
+1516324768 c:\opencv\build\x86\mingw\install\include\opencv2\core\types.hpp
+	<climits>
+	<cfloat>
+	<vector>
+	<limits>
+	"opencv2/core/cvdef.h"
+	"opencv2/core/cvstd.hpp"
+	"opencv2/core/matx.hpp"
+
+1518487453 c:\opencv\build\x86\mingw\install\include\opencv2\core\mat.hpp
+	"opencv2/core/matx.hpp"
+	"opencv2/core/types.hpp"
+	"opencv2/core/bufferpool.hpp"
+	<type_traits>
+	"opencv2/core/mat.inl.hpp"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\core\bufferpool.hpp
+
+1518487453 c:\opencv\build\x86\mingw\install\include\opencv2\core\mat.inl.hpp
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\core\persistence.hpp
+	"opencv2/core/types.hpp"
+	"opencv2/core/mat.hpp"
+	"opencv2/opencv.hpp"
+	<time.h>
+
+1519119748 c:\opencv\build\x86\mingw\install\include\opencv2\opencv.hpp
+	"opencv2/opencv_modules.hpp"
+	"opencv2/core.hpp"
+	"opencv2/calib3d.hpp"
+	"opencv2/features2d.hpp"
+	"opencv2/dnn.hpp"
+	"opencv2/flann.hpp"
+	"opencv2/highgui.hpp"
+	"opencv2/imgcodecs.hpp"
+	"opencv2/imgproc.hpp"
+	"opencv2/ml.hpp"
+	"opencv2/objdetect.hpp"
+	"opencv2/photo.hpp"
+	"opencv2/shape.hpp"
+	"opencv2/stitching.hpp"
+	"opencv2/superres.hpp"
+	"opencv2/video.hpp"
+	"opencv2/videoio.hpp"
+	"opencv2/videostab.hpp"
+	"opencv2/viz.hpp"
+	"opencv2/cudaarithm.hpp"
+	"opencv2/cudabgsegm.hpp"
+	"opencv2/cudacodec.hpp"
+	"opencv2/cudafeatures2d.hpp"
+	"opencv2/cudafilters.hpp"
+	"opencv2/cudaimgproc.hpp"
+	"opencv2/cudaobjdetect.hpp"
+	"opencv2/cudaoptflow.hpp"
+	"opencv2/cudastereo.hpp"
+	"opencv2/cudawarping.hpp"
+
+1518917766 c:\opencv\build\x86\mingw\install\include\opencv2\imgproc.hpp
+	"opencv2/core.hpp"
+	<opencv2/core.hpp>
+	<opencv2/imgproc.hpp>
+	<opencv2/imgcodecs.hpp>
+	<opencv2/highgui.hpp>
+	<iostream>
+	<opencv2/imgproc.hpp>
+	<opencv2/highgui.hpp>
+	<opencv2/imgproc.hpp>
+	<opencv2/highgui.hpp>
+	<math.h>
+	<opencv2/imgproc.hpp>
+	<opencv2/highgui.hpp>
+	"opencv2/imgproc.hpp"
+	"opencv2/highgui.hpp"
+	"opencv2/imgproc/imgproc_c.h"
+
+1516324768 c:\opencv\build\x86\mingw\install\include\opencv2\imgcodecs.hpp
+	"opencv2/core.hpp"
+
+1516324768 c:\opencv\build\x86\mingw\install\include\opencv2\highgui.hpp
+	"opencv2/core.hpp"
+	"opencv2/imgcodecs.hpp"
+	"opencv2/videoio.hpp"
+	"opencv2/highgui/highgui_c.h"
+
+1519348694 c:\opencv\build\x86\mingw\install\include\opencv2\videoio.hpp
+	"opencv2/core.hpp"
+
+1516324768 c:\opencv\build\x86\mingw\install\include\opencv2\highgui\highgui_c.h
+	"opencv2/core/core_c.h"
+	"opencv2/imgproc/imgproc_c.h"
+	"opencv2/imgcodecs/imgcodecs_c.h"
+	"opencv2/videoio/videoio_c.h"
+
+1518487453 c:\opencv\build\x86\mingw\install\include\opencv2\core\core_c.h
+	"opencv2/core/types_c.h"
+	"cxcore.h"
+	"cxcore.h"
+	"opencv2/core/utility.hpp"
+
+1518571742 c:\opencv\build\x86\mingw\install\include\opencv2\core\types_c.h
+	<ipl.h>
+	<ipl/ipl.h>
+	"opencv2/core/cvdef.h"
+	<assert.h>
+	<stdlib.h>
+	<string.h>
+	<float.h>
+	"opencv2/core.hpp"
+
+1519273595 c:\opencv\build\x86\mingw\install\include\opencv2\core\utility.hpp
+	"opencv2/core.hpp"
+	<ostream>
+	<functional>
+	"opencv2/core/core_c.h"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\imgproc\imgproc_c.h
+	"opencv2/imgproc/types_c.h"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\imgproc\types_c.h
+	"opencv2/core/core_c.h"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\imgcodecs\imgcodecs_c.h
+	"opencv2/core/core_c.h"
+
+1518657431 c:\opencv\build\x86\mingw\install\include\opencv2\videoio\videoio_c.h
+	"opencv2/core/core_c.h"
+
+1448038428 c:\opencv\build\x86\mingw\install\include\opencv2\photo.hpp
+	"opencv2/core.hpp"
+	"opencv2/imgproc.hpp"
+	"opencv2/photo/photo_c.h"
+
+1448038428 c:\opencv\build\x86\mingw\install\include\opencv2\photo\photo_c.h
+	"opencv2/core/core_c.h"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\video.hpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/video/background_segm.hpp"
+	"opencv2/video/tracking_c.h"
+
+1518657431 c:\opencv\build\x86\mingw\install\include\opencv2\video\background_segm.hpp
+	"opencv2/core.hpp"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\video\tracking_c.h
+	"opencv2/imgproc/types_c.h"
+
+1518657431 c:\opencv\build\x86\mingw\install\include\opencv2\features2d.hpp
+	"opencv2/opencv_modules.hpp"
+	"opencv2/core.hpp"
+	"opencv2/flann/miniflann.hpp"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\miniflann.hpp
+	"opencv2/core.hpp"
+	"opencv2/flann/defines.h"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\defines.h
+	"config.h"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\config.h
+
+1518571742 c:\opencv\build\x86\mingw\install\include\opencv2\objdetect.hpp
+	"opencv2/core.hpp"
+	"opencv2/objdetect/detection_based_tracker.hpp"
+	"opencv2/objdetect/objdetect_c.h"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\objdetect\detection_based_tracker.hpp
+	<opencv2/core.hpp>
+	<vector>
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\objdetect\objdetect_c.h
+	"opencv2/core/core_c.h"
+	<deque>
+	<vector>
+
+1517015934 c:\opencv\build\x86\mingw\install\include\opencv2\calib3d.hpp
+	"opencv2/core.hpp"
+	"opencv2/features2d.hpp"
+	"opencv2/core/affine.hpp"
+	"opencv2/calib3d/calib3d_c.h"
+
+1515374587 c:\opencv\build\x86\mingw\install\include\opencv2\core\affine.hpp
+	<opencv2/core.hpp>
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\calib3d\calib3d_c.h
+	"opencv2/core/core_c.h"
+
+1518571742 c:\opencv\build\x86\mingw\install\include\opencv2\ml.hpp
+	"opencv2/core.hpp"
+	<float.h>
+	<map>
+	<iostream>
+	<opencv2/ml/ml.inl.hpp>
+
+1519273595 c:\opencv\build\x86\mingw\install\include\opencv2\core\operations.hpp
+	<cstdio>
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\core\cvstd.inl.hpp
+	<complex>
+	<ostream>
+
+1518487453 c:\opencv\build\x86\mingw\install\include\opencv2\core\optim.hpp
+	"opencv2/core.hpp"
+
+1513622285 c:\opencv\build\x86\mingw\install\include\opencv2\imgproc\imgproc.hpp
+	"opencv2/imgproc.hpp"
+
+1513622285 c:\opencv\build\x86\mingw\install\include\opencv2\videoio\videoio.hpp
+	"opencv2/videoio.hpp"
+
+1513622285 c:\opencv\build\x86\mingw\install\include\opencv2\highgui\highgui.hpp
+	"opencv2/highgui.hpp"
+
+1459768863 source:c:\local\files\project\opticalflow\opticalflow 4-4-2016a\main.cpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/videoio/videoio.hpp"
+	"opencv2/highgui/highgui.hpp"
+	<opencv2/highgui/highgui.hpp>
+	<opencv2/imgproc/imgproc.hpp>
+	"opencv2/video/tracking.hpp"
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+	<ctype.h>
+
+1459777340 source:c:\local\files\project\opticalflow\opticalflow 4-4-2016b\main.cpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/videoio/videoio.hpp"
+	"opencv2/highgui/highgui.hpp"
+	<opencv2/highgui/highgui.hpp>
+	<opencv2/imgproc/imgproc.hpp>
+	"opencv2/video/tracking.hpp"
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+	<ctype.h>
+
+1459782613 source:c:\local\files\project\opticalflow\opticalflow 4-4-2016c\main.cpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/videoio/videoio.hpp"
+	"opencv2/highgui/highgui.hpp"
+	<opencv2/highgui/highgui.hpp>
+	<opencv2/imgproc/imgproc.hpp>
+	"opencv2/video/tracking.hpp"
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+	<ctype.h>
+
+1459785552 source:c:\local\files\project\opticalflow\opticalflow 4-4-2016d\main.cpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/videoio/videoio.hpp"
+	"opencv2/highgui/highgui.hpp"
+	<opencv2/highgui/highgui.hpp>
+	<opencv2/imgproc/imgproc.hpp>
+	"opencv2/video/tracking.hpp"
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+	<ctype.h>
+
+1459861932 source:c:\local\files\project\opticalflow\opticalflow 4-5-2016a\main.cpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/videoio/videoio.hpp"
+	"opencv2/highgui/highgui.hpp"
+	<opencv2/highgui/highgui.hpp>
+	<opencv2/imgproc/imgproc.hpp>
+	"opencv2/video/tracking.hpp"
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+	<ctype.h>
+
+1459872322 source:c:\local\files\project\opticalflow\opticalflow 4-5-2016b\main.cpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/videoio/videoio.hpp"
+	"opencv2/highgui/highgui.hpp"
+	<opencv2/highgui/highgui.hpp>
+	<opencv2/imgproc/imgproc.hpp>
+	"opencv2/video/tracking.hpp"
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+	<ctype.h>
+
+1459936682 source:c:\local\files\project\opticalflow\opticalflow 4-6-2016a\main.cpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/videoio/videoio.hpp"
+	"opencv2/highgui/highgui.hpp"
+	<opencv2/highgui/highgui.hpp>
+	<opencv2/imgproc/imgproc.hpp>
+	"opencv2/video/tracking.hpp"
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+	<ctype.h>
+
+1459939403 source:c:\local\files\project\opticalflow\opticalflow 4-6-2016b\main.cpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/videoio/videoio.hpp"
+	"opencv2/highgui/highgui.hpp"
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+	<ctype.h>
+
+1459943906 source:c:\local\files\project\opticalflow\opticalflow 4-6-2016c\main.cpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/videoio/videoio.hpp"
+	"opencv2/highgui/highgui.hpp"
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+	<ctype.h>
+
+1460039580 source:c:\local\files\project\opticalflow\opticalflow 4-7-2016a\main.cpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/videoio/videoio.hpp"
+	"opencv2/highgui/highgui.hpp"
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+
+1460123229 source:c:\local\files\project\opticalflow\opticalflow 4-8-2016a - lines\main.cpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/videoio/videoio.hpp"
+	"opencv2/highgui/highgui.hpp"
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+
+1460135757 source:c:\local\files\project\opticalflow\opticalflow 4-8-2016b - lines\main.cpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/videoio/videoio.hpp"
+	"opencv2/highgui/highgui.hpp"
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+
+1460194130 source:c:\local\files\project\opticalflow\opticalflow 4-9-2016a - lines\main.cpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/videoio/videoio.hpp"
+	"opencv2/highgui/highgui.hpp"
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+
+1460201291 source:c:\local\files\project\opticalflow\opticalflow 4-9-2016b\main.cpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/videoio/videoio.hpp"
+	"opencv2/highgui/highgui.hpp"
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+
+1460204216 source:c:\local\files\project\opticalflow\opticalflow 4-9-2016c\main.cpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/videoio/videoio.hpp"
+	"opencv2/highgui/highgui.hpp"
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+
+1460208899 source:c:\local\files\project\opticalflow\opticalflow 4-9-2016d\main.cpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/videoio/videoio.hpp"
+	"opencv2/highgui/highgui.hpp"
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+
+1460218359 source:c:\local\files\project\opticalflow\opticalflow 4-9-2016e\main.cpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/videoio/videoio.hpp"
+	"opencv2/highgui/highgui.hpp"
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+
+1460225040 source:c:\local\files\project\opticalflow\opticalflow 4-9-2016f volume\main.cpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/videoio/videoio.hpp"
+	"opencv2/highgui/highgui.hpp"
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+
+1460394440 source:c:\local\files\project\opticalflow\opticalflow 4-11-2016a\main.cpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/videoio/videoio.hpp"
+	"opencv2/highgui/highgui.hpp"
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+	"circlefit.h"
+
+1460390625 source:c:\local\files\project\opticalflow\opticalflow 4-11-2016a\circlefit.cpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/videoio/videoio.hpp"
+	"opencv2/highgui/highgui.hpp"
+	<opencv2/calib3d.hpp>
+	"circlefit.h"
+
+1460390240 c:\local\files\project\opticalflow\opticalflow 4-11-2016a\circlefit.h
+
+1460390625 source:c:\local\files\project\opticalflow\opticalflow 4-11-2016b\circlefit.cpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/videoio/videoio.hpp"
+	"opencv2/highgui/highgui.hpp"
+	<opencv2/calib3d.hpp>
+	"circlefit.h"
+
+1460390240 c:\local\files\project\opticalflow\opticalflow 4-11-2016b\circlefit.h
+
+1460395658 source:c:\local\files\project\opticalflow\opticalflow 4-11-2016b\main.cpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/videoio/videoio.hpp"
+	"opencv2/highgui/highgui.hpp"
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+	"circlefit.h"
+
+1460390625 source:c:\local\files\project\opticalflow\opticalflow 4-12-2016a\circlefit.cpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/videoio/videoio.hpp"
+	"opencv2/highgui/highgui.hpp"
+	<opencv2/calib3d.hpp>
+	"circlefit.h"
+
+1460390240 c:\local\files\project\opticalflow\opticalflow 4-12-2016a\circlefit.h
+
+1460461925 source:c:\local\files\project\opticalflow\opticalflow 4-12-2016a\main.cpp
+	<opencv2/video/tracking.hpp>
+	<opencv2/imgproc/imgproc.hpp>
+	<opencv2/videoio/videoio.hpp>
+	<opencv2/highgui/highgui.hpp>
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+
+1460462575 source:c:\local\files\project\opticalflow\opticalflow 4-12-2016b\main.cpp
+	<opencv2/video/tracking.hpp>
+	<opencv2/imgproc/imgproc.hpp>
+	<opencv2/videoio/videoio.hpp>
+	<opencv2/highgui/highgui.hpp>
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+
+1460465562 source:c:\local\files\project\opticalflow\opticalflow 4-12-2016c\main.cpp
+	<opencv2/video/tracking.hpp>
+	<opencv2/imgproc/imgproc.hpp>
+	<opencv2/videoio/videoio.hpp>
+	<opencv2/highgui/highgui.hpp>
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+
+1460473148 source:c:\local\files\project\opticalflow\opticalflow 4-12-2016d\main.cpp
+	<opencv2/video/tracking.hpp>
+	<opencv2/imgproc/imgproc.hpp>
+	<opencv2/videoio/videoio.hpp>
+	<opencv2/highgui/highgui.hpp>
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+
+1460555115 source:c:\local\files\project\opticalflow\opticalflow 4-13-2016a\main.cpp
+	<opencv2/video/tracking.hpp>
+	<opencv2/imgproc/imgproc.hpp>
+	<opencv2/videoio/videoio.hpp>
+	<opencv2/highgui/highgui.hpp>
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+
+1460724312 source:c:\local\files\project\opticalflow\opticalflow 4-14-2016a\main.cpp
+	<opencv2/video/tracking.hpp>
+	<opencv2/imgproc/imgproc.hpp>
+	<opencv2/videoio/videoio.hpp>
+	<opencv2/highgui/highgui.hpp>
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+
+1461332914 source:c:\local\files\project\opticalflow\opticalflow 4-22-2016a\main.cpp
+	<opencv2/video/tracking.hpp>
+	<opencv2/imgproc/imgproc.hpp>
+	<opencv2/videoio/videoio.hpp>
+	<opencv2/highgui/highgui.hpp>
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+
+1477056981 source:c:\users\t5795jh\desktop\brushless gimbal\opticalflow 4-22-2016a\main.cpp
+	<opencv2/video/tracking.hpp>
+	<opencv2/imgproc/imgproc.hpp>
+	<opencv2/videoio/videoio.hpp>
+	<opencv2/highgui/highgui.hpp>
+	<opencv2/calib3d.hpp>
+	<windows.h>
+	<iostream>
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\core\hal\interface.h
+	<cstddef>
+	<stddef.h>
+	<stdbool.h>
+	<cstdint>
+	<stdint.h>
+
+1514596691 c:\opencv\build\x86\mingw\install\include\opencv2\core\cv_cpu_dispatch.h
+	"cv_cpu_config.h"
+	"cv_cpu_helper.h"
+	<emmintrin.h>
+	<pmmintrin.h>
+	<tmmintrin.h>
+	<smmintrin.h>
+	<nmmintrin.h>
+	<nmmintrin.h>
+	<popcntintrin.h>
+	<immintrin.h>
+	<arm_neon.h>
+	<immintrin.h>
+	<immintrin.h>
+	<immintrin.h>
+	<immintrin.h>
+	<Intrin.h>
+	<arm_neon.h>
+	<arm_neon.h>
+	<arm_neon.h>
+	<altivec.h>
+	<emmintrin.h>
+	<Intrin.h>
+	<arm_neon.h>
+	<arm_neon.h>
+	<altivec.h>
+
+1518487453 c:\opencv\build\x86\mingw\install\include\opencv2\core\cv_cpu_helper.h
+
+1523893180 c:\opencv\build\x86\mingw\install\include\opencv2\opencv_modules.hpp
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\core\neon_utils.hpp
+	"opencv2/core/cvdef.h"
+
+1518487453 c:\opencv\build\x86\mingw\install\include\opencv2\core\vsx_utils.hpp
+	"opencv2/core/cvdef.h"
+	<assert.h>
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\core\saturate.hpp
+	"opencv2/core/cvdef.h"
+	"opencv2/core/fast_math.hpp"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\core\fast_math.hpp
+	"opencv2/core/cvdef.h"
+	<emmintrin.h>
+	<cmath>
+	<fastmath.h>
+	<math.h>
+	"tegra_round.hpp"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann.hpp
+	"opencv2/core.hpp"
+	"opencv2/flann/miniflann.hpp"
+	"opencv2/flann/flann_base.hpp"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\flann_base.hpp
+	<vector>
+	<cassert>
+	<cstdio>
+	"general.h"
+	"matrix.h"
+	"params.h"
+	"saving.h"
+	"all_indices.h"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\general.h
+	"opencv2/core.hpp"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\matrix.h
+	<stdio.h>
+	"general.h"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\params.h
+	"any.h"
+	"general.h"
+	<iostream>
+	<map>
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\any.h
+	"defines.h"
+	<stdexcept>
+	<ostream>
+	<typeinfo>
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\saving.h
+	<cstring>
+	<vector>
+	"general.h"
+	"nn_index.h"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\nn_index.h
+	"general.h"
+	"matrix.h"
+	"result_set.h"
+	"params.h"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\result_set.h
+	<algorithm>
+	<cstring>
+	<iostream>
+	<limits>
+	<set>
+	<vector>
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\all_indices.h
+	"general.h"
+	"nn_index.h"
+	"kdtree_index.h"
+	"kdtree_single_index.h"
+	"kmeans_index.h"
+	"composite_index.h"
+	"linear_index.h"
+	"hierarchical_clustering_index.h"
+	"lsh_index.h"
+	"autotuned_index.h"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\kdtree_index.h
+	<algorithm>
+	<map>
+	<cassert>
+	<cstring>
+	"general.h"
+	"nn_index.h"
+	"dynamic_bitset.h"
+	"matrix.h"
+	"result_set.h"
+	"heap.h"
+	"allocator.h"
+	"random.h"
+	"saving.h"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\dynamic_bitset.h
+	<boost/dynamic_bitset.hpp>
+	<limits.h>
+	"dist.h"
+
+1518571742 c:\opencv\build\x86\mingw\install\include\opencv2\flann\dist.h
+	<cmath>
+	<cstdlib>
+	<string.h>
+	<stdint.h>
+	"defines.h"
+	<Intrin.h>
+	"arm_neon.h"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\heap.h
+	<algorithm>
+	<vector>
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\allocator.h
+	<stdlib.h>
+	<stdio.h>
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\random.h
+	<algorithm>
+	<cstdlib>
+	<vector>
+	"general.h"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\kdtree_single_index.h
+	<algorithm>
+	<map>
+	<cassert>
+	<cstring>
+	"general.h"
+	"nn_index.h"
+	"matrix.h"
+	"result_set.h"
+	"heap.h"
+	"allocator.h"
+	"random.h"
+	"saving.h"
+
+1518571742 c:\opencv\build\x86\mingw\install\include\opencv2\flann\kmeans_index.h
+	<algorithm>
+	<map>
+	<cassert>
+	<limits>
+	<cmath>
+	"general.h"
+	"nn_index.h"
+	"dist.h"
+	"matrix.h"
+	"result_set.h"
+	"heap.h"
+	"allocator.h"
+	"random.h"
+	"saving.h"
+	"logger.h"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\logger.h
+	<stdio.h>
+	<stdarg.h>
+	"defines.h"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\composite_index.h
+	"general.h"
+	"nn_index.h"
+	"kdtree_index.h"
+	"kmeans_index.h"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\linear_index.h
+	"general.h"
+	"nn_index.h"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\hierarchical_clustering_index.h
+	<algorithm>
+	<map>
+	<cassert>
+	<limits>
+	<cmath>
+	"general.h"
+	"nn_index.h"
+	"dist.h"
+	"matrix.h"
+	"result_set.h"
+	"heap.h"
+	"allocator.h"
+	"random.h"
+	"saving.h"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\lsh_index.h
+	<algorithm>
+	<cassert>
+	<cstring>
+	<map>
+	<vector>
+	"general.h"
+	"nn_index.h"
+	"matrix.h"
+	"result_set.h"
+	"heap.h"
+	"lsh_table.h"
+	"allocator.h"
+	"random.h"
+	"saving.h"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\lsh_table.h
+	<algorithm>
+	<iostream>
+	<iomanip>
+	<limits.h>
+	<unordered_map>
+	<map>
+	<math.h>
+	<stddef.h>
+	"dynamic_bitset.h"
+	"matrix.h"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\autotuned_index.h
+	<sstream>
+	"general.h"
+	"nn_index.h"
+	"ground_truth.h"
+	"index_testing.h"
+	"sampling.h"
+	"kdtree_index.h"
+	"kdtree_single_index.h"
+	"kmeans_index.h"
+	"composite_index.h"
+	"linear_index.h"
+	"logger.h"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\ground_truth.h
+	"dist.h"
+	"matrix.h"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\index_testing.h
+	<cstring>
+	<cassert>
+	<cmath>
+	"matrix.h"
+	"nn_index.h"
+	"result_set.h"
+	"logger.h"
+	"timer.h"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\timer.h
+	<time.h>
+	"opencv2/core.hpp"
+	"opencv2/core/utility.hpp"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\flann\sampling.h
+	"matrix.h"
+	"random.h"
+
+1513981795 c:\opencv\build\x86\mingw\install\include\opencv2\ml\ml.inl.hpp
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\shape.hpp
+	"opencv2/shape/emdL1.hpp"
+	"opencv2/shape/shape_transformer.hpp"
+	"opencv2/shape/hist_cost.hpp"
+	"opencv2/shape/shape_distance.hpp"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\shape\emdl1.hpp
+	"opencv2/core.hpp"
+
+1518571742 c:\opencv\build\x86\mingw\install\include\opencv2\shape\shape_transformer.hpp
+	<vector>
+	"opencv2/core.hpp"
+	"opencv2/imgproc.hpp"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\shape\hist_cost.hpp
+	"opencv2/imgproc.hpp"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\shape\shape_distance.hpp
+	"opencv2/core.hpp"
+	"opencv2/shape/hist_cost.hpp"
+	"opencv2/shape/shape_transformer.hpp"
+
+1517015934 c:\opencv\build\x86\mingw\install\include\opencv2\stitching.hpp
+	"opencv2/core.hpp"
+	"opencv2/features2d.hpp"
+	"opencv2/stitching/warpers.hpp"
+	"opencv2/stitching/detail/matchers.hpp"
+	"opencv2/stitching/detail/motion_estimators.hpp"
+	"opencv2/stitching/detail/exposure_compensate.hpp"
+	"opencv2/stitching/detail/seam_finders.hpp"
+	"opencv2/stitching/detail/blenders.hpp"
+	"opencv2/stitching/detail/camera.hpp"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\stitching\warpers.hpp
+	"opencv2/stitching/detail/warpers.hpp"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\stitching\detail\warpers.hpp
+	"opencv2/core.hpp"
+	"opencv2/core/cuda.hpp"
+	"opencv2/imgproc.hpp"
+	"opencv2/opencv_modules.hpp"
+	"warpers_inl.hpp"
+
+1518571742 c:\opencv\build\x86\mingw\install\include\opencv2\core\cuda.hpp
+	"opencv2/core.hpp"
+	"opencv2/core/cuda_types.hpp"
+	<opencv2/opencv.hpp>
+	"opencv2/core/cuda.inl.hpp"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\core\cuda_types.hpp
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\core\cuda.inl.hpp
+	"opencv2/core/cuda.hpp"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\stitching\detail\warpers_inl.hpp
+	"opencv2/core.hpp"
+	"warpers.hpp"
+	<limits>
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\stitching\detail\matchers.hpp
+	"opencv2/core.hpp"
+	"opencv2/features2d.hpp"
+	"opencv2/opencv_modules.hpp"
+	"opencv2/xfeatures2d/cuda.hpp"
+
+1518571742 c:\opencv\build\x86\mingw\install\include\opencv2\stitching\detail\motion_estimators.hpp
+	"opencv2/core.hpp"
+	"matchers.hpp"
+	"util.hpp"
+	"camera.hpp"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\stitching\detail\util.hpp
+	<list>
+	"opencv2/core.hpp"
+	"util_inl.hpp"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\stitching\detail\util_inl.hpp
+	<queue>
+	"opencv2/core.hpp"
+	"util.hpp"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\stitching\detail\camera.hpp
+	"opencv2/core.hpp"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\stitching\detail\exposure_compensate.hpp
+	"opencv2/core.hpp"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\stitching\detail\seam_finders.hpp
+	<set>
+	"opencv2/core.hpp"
+	"opencv2/opencv_modules.hpp"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\stitching\detail\blenders.hpp
+	"opencv2/core.hpp"
+
+1518571742 c:\opencv\build\x86\mingw\install\include\opencv2\superres.hpp
+	"opencv2/core.hpp"
+	"opencv2/superres/optical_flow.hpp"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\superres\optical_flow.hpp
+	"opencv2/core.hpp"
+
+1513625885 c:\opencv\build\x86\mingw\install\include\opencv2\core\ovx.hpp
+	"cvdef.h"
+
+1551800757 source:c:\users\t5795jh\desktop\brushless gimbal\meanshift\main.cpp
+	<opencv2/core/utility.hpp>
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc.hpp"
+	"opencv2/videoio.hpp"
+	"opencv2/highgui.hpp"
+	<iostream>
+	<ctype.h>
+
+1552735400 source:c:\users\t5795jh\desktop\brushless gimbal\meanshift rgb\main.cpp
+	<opencv2/core/utility.hpp>
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc.hpp"
+	"opencv2/videoio.hpp"
+	"opencv2/highgui.hpp"
+	<iostream>
+	<ctype.h>
+
+1552740588 source:c:\users\t5795jh\desktop\brushless gimbal\tracker\main.cpp
+	<opencv2/core/utility.hpp>
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc.hpp"
+	"opencv2/videoio.hpp"
+	"opencv2/highgui.hpp"
+	<iostream>
+	<ctype.h>
+
+1552762821 source:c:\users\t5795jh\desktop\brushless gimbal\tracker\src\main.cpp
+	<windows.h>
+	<windowsx.h>
+	<stdio.h>
+	"main.h"
+	"utility.h"
+	"Tracker.h"
+
+1552763324 c:\users\t5795jh\desktop\brushless gimbal\tracker\src\tracker.h
+	<windows.h>
+	<opencv2/core/utility.hpp>
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc.hpp"
+	"opencv2/videoio.hpp"
+	"opencv2/highgui.hpp"
+	<iostream>
+	<ctype.h>
+
+1552762670 source:c:\users\t5795jh\desktop\brushless gimbal\tracker\src\tracker.cpp
+	<windows.h>
+	<opencv2/core/utility.hpp>
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc.hpp"
+	"opencv2/videoio.hpp"
+	"opencv2/highgui.hpp"
+	<ctype.h>
+	"Tracker.h"
+	"Main.h"
+
+1552762822 c:\users\t5795jh\desktop\brushless gimbal\tracker\src\main.h
+	<windows.h>
+	"utility.h"
+
+1552756620 c:\users\t5795jh\desktop\brushless gimbal\tracker\src\utility.h
+	<windows.h>
+
+1552756581 source:c:\users\t5795jh\desktop\brushless gimbal\tracker\src\utility.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<cstdarg>
+	<math.h>
+	"utility.h"
+
+1554066583 source:c:\users\nulluser\desktop\brushless gimbal\source\gimbaltracker\tracker\src\main.cpp
+	<windows.h>
+	<windowsx.h>
+	<stdio.h>
+	"Main.h"
+	"Config.h"
+	"Utility.h"
+	"Tracker.h"
+	"Scanner.h"
+
+1554053802 c:\users\nulluser\desktop\brushless gimbal\source\gimbaltracker\tracker\src\main.h
+	<windows.h>
+	"utility.h"
+
+1554066003 c:\users\nulluser\desktop\brushless gimbal\source\gimbaltracker\tracker\src\utility.h
+	<windows.h>
+
+1554070736 c:\users\nulluser\desktop\brushless gimbal\source\gimbaltracker\tracker\src\tracker.h
+	<windows.h>
+	<iostream>
+	<ctype.h>
+	"Types.h"
+	"PID.h"
+	"Gimbal.h"
+
+1554066759 source:c:\users\nulluser\desktop\brushless gimbal\source\gimbaltracker\tracker\src\tracker.cpp
+	"Tracker.h"
+	"Main.h"
+	"Gimbal.h"
+
+1554065934 source:c:\users\nulluser\desktop\brushless gimbal\source\gimbaltracker\tracker\src\utility.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<cstdarg>
+	<math.h>
+	"utility.h"
+
+1554052806 source:c:\users\nulluser\desktop\brushless gimbal\source\gimbaltracker\tracker\src\pid.cpp
+	"PID.h"
+	"utility.h"
+
+1552862322 c:\users\nulluser\desktop\brushless gimbal\source\gimbaltracker\tracker\src\pid.h
+
+1554050602 source:c:\users\nulluser\desktop\brushless gimbal\source\gimbaltracker\tracker\src\serial.cpp
+	<windows.h>
+	<stdio.h>
+	"utility.h"
+	"serial.h"
+
+1554050428 c:\users\nulluser\desktop\brushless gimbal\source\gimbaltracker\tracker\src\serial.h
+
+1554070889 c:\users\nulluser\desktop\brushless gimbal\source\gimbaltracker\tracker\src\gimbal.h
+	<windows.h>
+	"Types.h"
+
+1554070889 source:c:\users\nulluser\desktop\brushless gimbal\source\gimbaltracker\tracker\src\gimbal.cpp
+	<windows.h>
+	<stdio.h>
+	<stdint.h>
+	<string>
+	"Utility.h"
+	"Config.h"
+	"Serial.h"
+	"Gimbal.h"
+
+1554065875 source:c:\users\nulluser\desktop\brushless gimbal\source\gimbaltracker\tracker\src\scanner.cpp
+	<windows.h>
+	<opencv2/core/utility.hpp>
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc.hpp"
+	"opencv2/videoio.hpp"
+	"opencv2/highgui.hpp"
+	<ctype.h>
+	"Scanner.h"
+	"Config.h"
+	"Main.h"
+	"Gimbal.h"
+
+1554062887 c:\users\nulluser\desktop\brushless gimbal\source\gimbaltracker\tracker\src\scanner.h
+	<windows.h>
+	<opencv2/core/utility.hpp>
+	"opencv2/video/tracking.hpp"
+	"opencv2/imgproc.hpp"
+	"opencv2/videoio.hpp"
+	"opencv2/highgui.hpp"
+	<iostream>
+	<ctype.h>
+	"PID.h"
+
+1554061853 source:c:\users\nulluser\desktop\brushless gimbal\source\gimbaltracker\tracker\src\config.cpp
+	<fstream>
+	<algorithm>
+	"Config.h"
+	"Utility.h"
+
+1554051967 c:\users\nulluser\desktop\brushless gimbal\source\gimbaltracker\tracker\src\config.h
+	<string>
+	<vector>
+
+1554053578 c:\users\nulluser\desktop\brushless gimbal\source\gimbaltracker\tracker\src\types.h
+

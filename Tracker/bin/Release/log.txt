@@ -1,0 +1,107 @@
+Serial - Constructor
+Serial - Start
+Serial - Flushing
+[Scanner]  Video Cap
+[Scanner]   CV_CAP_PROP_POS_FRAMES:    -1.000000
+[Scanner]   CV_CAP_PROP_FRAME_WIDTH:   800.000000
+[Scanner]   CV_CAP_PROP_FRAME_HEIGHT:  600.000000
+[Scanner]   CV_CAP_PROP_FPS:           0.000000
+[Scanner]   CV_CAP_PROP_FOURCC:        ac800000
+[Scanner]   CV_CAP_PROP_FRAME_COUNT:   -1.000000
+[Scanner]   CV_CAP_PROP_FORMAT:        -1.000000
+[Scanner]   CV_CAP_PROP_MODE:          -1.000000
+[Scanner]   CV_CAP_PROP_BRIGHTNESS:    133.000000
+[Scanner]   CV_CAP_PROP_CONTRAST:      5.000000
+[Scanner]   CV_CAP_PROP_SATURATION:    83.000000
+[Scanner]   CV_CAP_PROP_HUE:           -1.000000
+[Scanner]   CV_CAP_PROP_GAIN:          -1.000000
+[Scanner]   CV_CAP_PROP_EXPOSURE:      -6.000000
+[Scanner]   CV_CAP_PROP_AUTO_EXPOSURE: -1.000000
+[Scanner]   CV_CAP_PROP_CONVERT_RGB:   -1.000000
+Frames: 7
+Serial - Online
+[Gimbal]   AFter serial
+[Gimbal]   Init
+[Main]   initWindow
+Gimbal Rate  0.00
+[Gimbal]   Write Values
+[Main]   Resize
+[Main]   Resize Complete
+[Main]   Init complete
+Serial - Read Timeout
+[Gimbal]   Write Values
+Serial - Read Timeout
+[Gimbal]   Write Values
+Serial - Read Timeout
+[Gimbal]   Write Values
+Serial - Read Timeout
+[Gimbal]   Write Values
+Frames: 8
+Serial - Read Timeout
+[Gimbal]   Write Values
+Serial - Read Timeout
+[Gimbal]   Write Values
+Serial - Read Timeout
+[Gimbal]   Write Values
+Serial - Read Timeout
+[Gimbal]   Write Values
+Serial - Read Timeout
+Gimbal Rate  4.50
+[Gimbal]   Write Values
+Serial - Read Timeout
+[Gimbal]   Write Values
+Serial - Read Timeout
+[Gimbal]   Write Values
+Serial - Read Timeout
+[Gimbal]   Write Values
+Serial - Read Timeout
+[Gimbal]   Write Values
+Frames: 8
+Serial - Read Timeout
+[Gimbal]   Write Values
+Serial - Read Timeout
+[Gimbal]   Write Values
+Serial - Read Timeout
+[Gimbal]   Write Values
+Serial - Read Timeout
+[Gimbal]   Write Values
+Serial - Read Timeout
+Gimbal Rate  6.75
+[Gimbal]   Write Values
+Serial - Read Timeout
+[Gimbal]   Write Values
+Serial - Read Timeout
+[Gimbal]   Write Values
+Serial - Read Timeout
+[Gimbal]   Write Values
+Serial - Read Timeout
+[Gimbal]   Write Values
+Serial - Read Timeout
+[Gimbal]   Write Values
+Frames: 8
+Serial - Read Timeout
+[Gimbal]   Write Values
+Serial - Read Timeout
+[Gimbal]   Write Values
+Serial - Read Timeout
+[Gimbal]   Write Values
+Serial - Read Timeout
+Gimbal Rate  7.88
+[Gimbal]   Write Values
+Serial - Read Timeout
+[Gimbal]   Write Values
+Serial - Read Timeout
+[Gimbal]   Write Values
+Serial - Read Timeout
+[Gimbal]   Write Values
+Serial - Read Timeout
+[Gimbal]   Write Values
+Serial - Read Timeout
+[Gimbal]   Write Values
+[Main]   Key down 27 65537
+[Main]   Shutdown
+[Main]   ~Main Enter
+Gimbal Destructor
+Frames: 8
+Serial - Read Timeout
+[Main]   Shutdown Complete

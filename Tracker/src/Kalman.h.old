@@ -1,0 +1,44 @@
+/*
+    Kalman Filter
+
+    2017 Jason Hunt - nulluser@gmail.com
+*/
+
+
+#ifndef KALMAN_H
+#define KALMAN_H
+
+
+// Kalman Filter
+class Kalman1D
+{
+public:
+    // Constructor, Parameters via initializer list
+    Kalman1D(void);
+
+    // Apply new sample and compute
+    void setMeasurementNoise(double v);
+    void setProcessNoise(double b);
+
+    double setSample(double z);
+
+    double getEstimate(void);
+    double getEstimateError(void);
+    double getGain(void);
+
+
+  private:
+
+    double K;       // Gain
+    double R;       // Sensor Noise
+    double x;       // Current Estimate
+    double P;       // Current Estimate Error
+    double Q;       // Process Noise
+};
+
+double Rand(double min, double max);
+
+
+void KalmanTest( void );
+
+#endif
