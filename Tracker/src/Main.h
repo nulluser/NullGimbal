@@ -39,7 +39,7 @@ const int WM_UPDATE = WM_APP + 1;
 
 
 class Tracker;
-class Scanner;
+class Camera;
 class Config;
 
 class Main
@@ -92,7 +92,7 @@ class Main
     bool keys[256];
 
     Tracker *tracker;
-    Scanner *scanner;
+    Camera *camera;
 
     //float orig_x_ofs;
     //float orig_y_ofs;

@@ -16,7 +16,7 @@
 #include "Config.h"
 #include "Utility.h"
 #include "Tracker.h"
-#include "Scanner.h"
+#include "CAMERA.h"
 
 // Main Constructor
 Main::Main (HINSTANCE hInstance, HINSTANCE hPrevInstance,
@@ -52,7 +52,7 @@ Main::Main (HINSTANCE hInstance, HINSTANCE hPrevInstance,
     log(MODULE "Main init\n");
 
     tracker = new Tracker(this, config);
-    scanner = new Scanner(this, config);
+    camera = new Camera(this, config);
 
     //SetTimer(hwnd, ID_UTIMER, 25, NULL);
     SetTimer(hwnd, ID_STIMER, 1000, NULL);      // One second timer
@@ -65,35 +65,35 @@ Main::~Main ( void )
 {
     console(MODULE "Main Destructor\n");
 
-    delete scanner;
+    delete camera;
     delete tracker;
 
-    scanner = NULL;
+    camera = NULL;
     tracker = NULL;
 
     console(MODULE "Main Destructor Exit\n");
 }
 
-// Called by scanner when new frame is available
+// Called by CAMERA when new frame is available
 void Main::update(void)
 {
     //console(MODULE "Update\n");
 
-    if (!scanner) { log(MODULE "Scanner null in update\n");return; };
+    if (!camera) { log(MODULE "CAMERA null in update\n");return; };
     if (!tracker) { log(MODULE "Tracker null in update\n");return; };
 
 
     float x, y, r;
 
-    bool target_valid = scanner->get_target(x, y, r);
+    bool target_valid = camera->get_target(x, y, r);
 
     if (target_valid)
     {
         if (tracker)
             tracker->update(x, y);
 
-        if (scanner)
-            scanner->draw_circle(x, y, r, 255, 128, 128);
+        if (camera)
+            camera->draw_circle(x, y, r, 255, 128, 128);
     }
 
     InvalidateRect(hwnd, NULL, 0);
@@ -176,9 +176,9 @@ void Main::eventDraw(HWND hwnd)
 {
     //log(MODULE_NAME "Draw\n");
 
-    // Draw scanner image
+    // Draw CAMERA image
     // Deal with objects not live at startup
-    if (scanner) scanner->draw_image(display.memdc, display.x_size, display.y_size);
+    if (camera) camera->draw_image(display.memdc, display.x_size, display.y_size);
 
     // Get current telemetry
     Telemetry t;
@@ -307,7 +307,7 @@ void Main::eventLMouseUp(WPARAM wparam, LPARAM lparam)
 
     printf("Selection (%f, %f) -> (%f, %f)\n", x1, y2, x2, y2);
 
-    scanner->set_selection(x1, y1, x2, y2);
+    camera->set_selection(x1, y1, x2, y2);
 
     mouse_ldown = false;
 }

@@ -1,15 +1,14 @@
 /*
-    Gimbal Scanner
+    Gimbal camera
 
     2019 nulluser # gmail.com
 
-    File: Scanner.cpp
+    File: camera.cpp
 
     Captures from camera and finds target
 */
 
-#define MODULE "[Scanner]  "
-#define MODULE_SCANNER
+#define MODULE_CAMERA
 
 
 #include <windows.h>
@@ -22,7 +21,7 @@
 #include <ctype.h>
 
 
-#include "Scanner.h"
+#include "Camera.h"
 #include "Config.h"
 #include "Main.h"
 #include "Gimbal.h"
@@ -31,10 +30,10 @@
 using namespace cv;
 
 
-// Scanner Constructor
-Scanner::Scanner(Main *m, Config *c) : main(m), config(c)
+// camera Constructor
+Camera::Camera(Main *m, Config *c) : main(m), config(c)
 {
-    log(MODULE "Scanner\n");
+    log(MODULE "camera\n");
 
     // Config Options
     config->getInt(CFG_NAME, "capture_x", capture_x, 800);
@@ -80,14 +79,14 @@ Scanner::Scanner(Main *m, Config *c) : main(m), config(c)
 
     InitializeCriticalSection(&image_cs);
 
-    h_thread = CreateThread(0, 0, scanner_thread, this, 0, &thread_id);
+    h_thread = CreateThread(0, 0, camera_thread, this, 0, &thread_id);
 
 }
 
 
-Scanner::~Scanner()
+Camera::~Camera()
 {
-    log(MODULE "Scanner Destructor\n");
+    log(MODULE "camera Destructor\n");
 
     running = false;
 
@@ -97,7 +96,7 @@ Scanner::~Scanner()
 
 
 // Make sure to init opencv objects in worker thread
-void Scanner::init_thread()
+void Camera::init_thread()
 {
     cap.open(0);
 
@@ -135,49 +134,49 @@ void Scanner::init_thread()
 
 
 
-    //namedWindow("Scanner Main", 0 );
-    //setMouseCallback( "Scanner Main", onMouse, &image );
+    //namedWindow("camera Main", 0 );
+    //setMouseCallback( "camera Main", onMouse, &image );
 
     //#define DEBUG_HS//
     // #ifdef DEBUG_HSV
     if(calibrate_hsv)
     {
-        createTrackbar( "Hmin", "Scanner Main", &h_min, 255, 0 );
-        createTrackbar( "Hmax", "Scanner Main", &h_max, 255, 0 );
-        createTrackbar( "Smin", "Scanner Main", &s_min, 255, 0 );
-        createTrackbar( "Smax", "Scanner Main", &s_max, 255, 0 );
-        createTrackbar( "Vmin", "Scanner Main", &v_min, 255, 0 );
-        createTrackbar( "Vmax", "Scanner Main", &v_max, 255, 0 );
+        createTrackbar( "Hmin", "camera Main", &h_min, 255, 0 );
+        createTrackbar( "Hmax", "camera Main", &h_max, 255, 0 );
+        createTrackbar( "Smin", "camera Main", &s_min, 255, 0 );
+        createTrackbar( "Smax", "camera Main", &s_max, 255, 0 );
+        createTrackbar( "Vmin", "camera Main", &v_min, 255, 0 );
+        createTrackbar( "Vmax", "camera Main", &v_max, 255, 0 );
     }
 
     //#define DEBUG_RGB
     //#ifdef DEBUG_RGB
     if(calibrate_rgb)
     {
-        createTrackbar( "Rmin", "Scanner Main", &r_min, 255, 0 );
-        createTrackbar( "Rmax", "Scanner Main", &r_max, 255, 0 );
-        createTrackbar( "Gmin", "Scanner Main", &g_min, 255, 0 );
-        createTrackbar( "Gmax", "Scanner Main", &g_max, 255, 0 );
-        createTrackbar( "Bmin", "Scanner Main", &b_min, 255, 0 );
-        createTrackbar( "Bmax", "Scanner Main", &b_max, 255, 0 );
+        createTrackbar( "Rmin", "camera Main", &r_min, 255, 0 );
+        createTrackbar( "Rmax", "camera Main", &r_max, 255, 0 );
+        createTrackbar( "Gmin", "camera Main", &g_min, 255, 0 );
+        createTrackbar( "Gmax", "camera Main", &g_max, 255, 0 );
+        createTrackbar( "Bmin", "camera Main", &b_min, 255, 0 );
+        createTrackbar( "Bmax", "camera Main", &b_max, 255, 0 );
     }
     //#endif
 
     running = true;
 }
 
-// Scanner update thread
-DWORD WINAPI Scanner::scanner_thread(LPVOID lpParameter)
+// camera update thread
+DWORD WINAPI Camera::camera_thread(LPVOID lpParameter)
 {
-    Scanner * scanner = (Scanner*)lpParameter;
+    Camera * camera = (Camera*)lpParameter;
 
-    scanner->init_thread();
+    camera->init_thread();
 
     int frames = 0;
 
     double last = get_time();
 
-	while(scanner->running)
+	while(camera->running)
     {
         double cur = get_time();
 
@@ -188,7 +187,7 @@ DWORD WINAPI Scanner::scanner_thread(LPVOID lpParameter)
             frames = 0;
         }
 
-        scanner->update();
+        camera->update();
 
         frames++;
 
@@ -197,10 +196,8 @@ DWORD WINAPI Scanner::scanner_thread(LPVOID lpParameter)
 }
 
 
-
-
-
-void Scanner::update()
+// Core camera update. Get image and notify main
+void Camera::update()
 {
     double t = get_time();
     cap >> image;
@@ -216,7 +213,7 @@ void Scanner::update()
 
     new_image = true;
 
-    //imshow( "Scanner Main", image );
+    //imshow( "camera Main", image );
 
 
     // Save final image for UI
@@ -239,7 +236,7 @@ void Scanner::update()
 
 
 // Renter opencv image to memory DC
-void Scanner::draw_image(HDC dc, int disp_x_size, int disp_y_size)
+void Camera::draw_image(HDC dc, int disp_x_size, int disp_y_size)
 {
     EnterCriticalSection(&image_cs);
 
@@ -273,7 +270,7 @@ void Scanner::draw_image(HDC dc, int disp_x_size, int disp_y_size)
 
 
 // Takes selection as ratio of full image size
-void Scanner::set_selection(float x1, float y1, float x2, float y2)
+void Camera::set_selection(float x1, float y1, float x2, float y2)
 {
 
     selection.x = x1 * image.cols;
@@ -311,7 +308,7 @@ void Scanner::set_selection(float x1, float y1, float x2, float y2)
 
 
 
-void Scanner::set_target(Rect window)
+void Camera::set_target(Rect window)
 {
     printf("Target %d %d   %d %d   \n", window.x, window.y, window.width, window.height);
 
@@ -330,7 +327,7 @@ void Scanner::set_target(Rect window)
 
 
 
-void Scanner::clean_image(Mat &source, Mat &cleaned)
+void Camera::clean_image(Mat &source, Mat &cleaned)
 {
     cv::medianBlur(source, filtered_bgr, 3);
 
@@ -378,7 +375,7 @@ void Scanner::clean_image(Mat &source, Mat &cleaned)
 
 
 
-void Scanner::find_target(Mat &source)
+void Camera::find_target(Mat &source)
 {
     static int hist_size[] = {16, 16, 16};
     static int hist_channels[] = {0, 1, 2};
@@ -590,7 +587,7 @@ void Scanner::find_target(Mat &source)
 
 /* Determine average of H S V and increase a windows around that point until a percentage of all
     pixels are inside the range*/
-void Scanner::compute_mask_range(cv::Mat &img)
+void Camera::compute_mask_range(cv::Mat &img)
 {
 
 //         for( int i = 0; i < hsize; i++ )
@@ -727,7 +724,7 @@ void Scanner::compute_mask_range(cv::Mat &img)
 
 
 // Compute histogram from selection
-void Scanner::compute_histogram(cv::Mat &img, cv::Rect selection, cv::Mat &hist)
+void Camera::compute_histogram(cv::Mat &img, cv::Rect selection, cv::Mat &hist)
 {
     static int hist_size[] = {16, 16, 16};
     static int hist_channels[] = {0, 1, 2};
@@ -776,7 +773,7 @@ void Scanner::compute_histogram(cv::Mat &img, cv::Rect selection, cv::Mat &hist)
 
 
 // Draw circle on output image
-void Scanner::draw_circle(float x, float y, float r, unsigned char cr, unsigned char cg, unsigned char cb)
+void Camera::draw_circle(float x, float y, float r, unsigned char cr, unsigned char cg, unsigned char cb)
 {
     int sx = (x+1) * image.cols / 2;
     int sy = (y+1) * image.rows / 2;
@@ -787,7 +784,7 @@ void Scanner::draw_circle(float x, float y, float r, unsigned char cr, unsigned 
 
 
 // Return target
-bool Scanner::get_target(float &x, float &y, float &r)
+bool Camera::get_target(float &x, float &y, float &r)
 {
     x = target_x;
     y = target_y;

@@ -1,14 +1,14 @@
 /*
-    Gimbal Scanner
+    Gimbal Tracker
 
     2019 nulluser # gmail.com
 
-    File: Scanner.cpp
+    File: Camera.cpp
 */
 
 
-#ifndef SCANNER_H
-#define SCANNER_H
+#ifndef CAMERA_H
+#define CAMERA_H
 
 #include <windows.h>
 
@@ -23,11 +23,12 @@
 
 #include "PID.h"
 
-#ifdef MODULE_SCANNER
-#define CFG_NAME    "scanner"
+#ifdef MODULE_CAMERA
+#define MODULE "[Camera]   "
+#define CFG_NAME    "camera"
 //#define CAPTURE_X   800
 //#define CAPTURE_Y   600
-DWORD WINAPI scanner_thread(LPVOID lpParameter);
+DWORD WINAPI CAMERA_thread(LPVOID lpParameter);
 #endif
 
 
@@ -35,13 +36,13 @@ class Main;
 class Config;
 class Gimbal;
 
-class Scanner
+class Camera
 {
 
   public:
 
-    Scanner(Main *m, Config *c);
-    ~Scanner();
+    Camera(Main *m, Config *c);
+    ~Camera();
 
     void update(void);
 
@@ -69,7 +70,7 @@ class Scanner
 
 
     void init_thread(void);
-    static DWORD WINAPI scanner_thread(LPVOID lpParameter);
+    static DWORD WINAPI camera_thread(LPVOID lpParameter);
 
 
     Main *main;

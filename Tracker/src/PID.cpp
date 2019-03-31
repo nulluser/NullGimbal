@@ -17,7 +17,7 @@
 
         Detect radial codes
 
-    FILE: Scanner.cpp
+    FILE: camera.cpp
 */
 
 #define MODULE_PID
