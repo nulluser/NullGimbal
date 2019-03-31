@@ -1214,7 +1214,7 @@
 	<string>
 	<vector>
 
-1554066003 c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\utility.h
+1554073152 c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\utility.h
 	<windows.h>
 
 1554070889 source:c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\gimbal.cpp
@@ -1252,7 +1252,7 @@
 	"Main.h"
 	"Gimbal.h"
 
-1554070736 c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\tracker.h
+1554073152 c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\tracker.h
 	<windows.h>
 	<iostream>
 	<ctype.h>
@@ -1295,4 +1295,14 @@
 	<iostream>
 	<ctype.h>
 	"PID.h"
+
+1554073063 source:c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\main.cpp
+	<windows.h>
+	<windowsx.h>
+	<stdio.h>
+	"Main.h"
+	"Config.h"
+	"Utility.h"
+	"Tracker.h"
+	"CAMERA.h"
 

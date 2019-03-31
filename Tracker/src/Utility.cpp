@@ -8,7 +8,7 @@
 
 
 #define MODULE_UTILITY
-#define MODULE_NAME "[Utility]"
+
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -16,7 +16,7 @@
 #include <cstdarg>
 #include <math.h>
 
-#include "utility.h"
+#include "Utility.h"
 
 const unsigned char log_enable = 0;
 

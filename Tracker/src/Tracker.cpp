@@ -8,7 +8,6 @@
     Tracks target and updates gimbal
 */
 
-#define MODULE "[Tracker]  "
 #define MODULE_TRACKER
 
 #include "Tracker.h"

@@ -21,6 +21,7 @@
 
 
 #ifdef MODULE_TRACKER
+#define MODULE "[Tracker]  "
 #define MIN_ANGLE_X -45
 #define MAX_ANGLE_X  45
 #define MIN_ANGLE_Y -45

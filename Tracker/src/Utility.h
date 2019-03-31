@@ -21,9 +21,8 @@
 
 // Private
 #ifdef MODULE_UTILITY
-
+#define MODULE "[Utility]"
 #define LOG_FILE "log.txt"
-
 #endif
 
 

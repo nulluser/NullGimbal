@@ -1,5 +1,5 @@
 /*
-    Gimbal camera
+    Gimbal Tracker
 
     2019 nulluser # gmail.com
 
@@ -10,7 +10,6 @@
 
 #define MODULE_CAMERA
 
-
 #include <windows.h>
 
 #include <opencv2/core/utility.hpp>
@@ -19,7 +18,6 @@
 #include "opencv2/videoio.hpp"
 #include "opencv2/highgui.hpp"
 #include <ctype.h>
-
 
 #include "Camera.h"
 #include "Config.h"
@@ -108,37 +106,27 @@ void Camera::init_thread()
 
     cap.set(cv::CAP_PROP_FRAME_WIDTH, capture_x);
     cap.set(cv::CAP_PROP_FRAME_HEIGHT, capture_y);
-
-    //cap.set(cv::CAP_PROP_FRAME_WIDTH, 1280);
-    //cap.set(cv::CAP_PROP_FRAME_HEIGHT, 720);
     cap.set(cv::CAP_PROP_AUTOFOCUS, autofocus);
 
     console(MODULE "Video Cap\n");
 
-    console(MODULE " CV_CAP_PROP_POS_FRAMES:    %f\n", cap.get(cv::CAP_PROP_POS_FRAMES));
-    console(MODULE " CV_CAP_PROP_FRAME_WIDTH:   %f\n", cap.get(cv::CAP_PROP_FRAME_WIDTH));    // Width of the frames in the video stream.
-    console(MODULE " CV_CAP_PROP_FRAME_HEIGHT:  %f\n", cap.get(cv::CAP_PROP_FRAME_HEIGHT));   // Height of the frames in the video stream.
-    console(MODULE " CV_CAP_PROP_FPS:           %f\n", cap.get(cv::CAP_PROP_FPS));            // Frame rate.
-    console(MODULE " CV_CAP_PROP_FOURCC:        %x\n", cap.get(cv::CAP_PROP_FOURCC));         //  4-character code of codec.
-    console(MODULE " CV_CAP_PROP_FRAME_COUNT:   %f\n", cap.get(cv::CAP_PROP_FRAME_COUNT));    // Number of frames in the video file.
-    console(MODULE " CV_CAP_PROP_FORMAT:        %f\n", cap.get(cv::CAP_PROP_FORMAT));         //  Format of the Mat objects returned by retrieve() .
-    console(MODULE " CV_CAP_PROP_MODE:          %f\n", cap.get(cv::CAP_PROP_MODE));           //  Backend-specific value indicating the current capture mode.
-    console(MODULE " CV_CAP_PROP_BRIGHTNESS:    %f\n", cap.get(cv::CAP_PROP_BRIGHTNESS));     // Brightness of the image (only for cameras).
-    console(MODULE " CV_CAP_PROP_CONTRAST:      %f\n", cap.get(cv::CAP_PROP_CONTRAST));       // Contrast of the image (only for cameras).
-    console(MODULE " CV_CAP_PROP_SATURATION:    %f\n", cap.get(cv::CAP_PROP_SATURATION));     // Saturation of the image (only for cameras).
-    console(MODULE " CV_CAP_PROP_HUE:           %f\n", cap.get(cv::CAP_PROP_HUE));            // Hue of the image (only for cameras).
-    console(MODULE " CV_CAP_PROP_GAIN:          %f\n", cap.get(cv::CAP_PROP_GAIN));           // Gain of the image (only for cameras).
-    console(MODULE " CV_CAP_PROP_EXPOSURE:      %f\n", cap.get(cv::CAP_PROP_EXPOSURE));       // Exposure (only for cameras).
-    console(MODULE " CV_CAP_PROP_AUTO_EXPOSURE: %f\n", cap.get(cv::CAP_PROP_AUTO_EXPOSURE));       // Exposure (only for cameras).
-    console(MODULE " CV_CAP_PROP_CONVERT_RGB:   %f\n", cap.get(cv::CAP_PROP_CONVERT_RGB));    // Boolean flags indicating whether images should be converted to RGB.
+    console(MODULE " POS_FRAMES:    %f\n", cap.get(cv::CAP_PROP_POS_FRAMES));
+    console(MODULE " FRAME_WIDTH:   %f\n", cap.get(cv::CAP_PROP_FRAME_WIDTH));    // Width of the frames in the video stream.
+    console(MODULE " FRAME_HEIGHT:  %f\n", cap.get(cv::CAP_PROP_FRAME_HEIGHT));   // Height of the frames in the video stream.
+    console(MODULE " FPS:           %f\n", cap.get(cv::CAP_PROP_FPS));            // Frame rate.
+    console(MODULE " FOURCC:        %x\n", cap.get(cv::CAP_PROP_FOURCC));         //  4-character code of codec.
+    console(MODULE " FRAME_COUNT:   %f\n", cap.get(cv::CAP_PROP_FRAME_COUNT));    // Number of frames in the video file.
+    console(MODULE " FORMAT:        %f\n", cap.get(cv::CAP_PROP_FORMAT));         //  Format of the Mat objects returned by retrieve() .
+    console(MODULE " MODE:          %f\n", cap.get(cv::CAP_PROP_MODE));           //  Backend-specific value indicating the current capture mode.
+    console(MODULE " BRIGHTNESS:    %f\n", cap.get(cv::CAP_PROP_BRIGHTNESS));     // Brightness of the image (only for cameras).
+    console(MODULE " CONTRAST:      %f\n", cap.get(cv::CAP_PROP_CONTRAST));       // Contrast of the image (only for cameras).
+    console(MODULE " SATURATION:    %f\n", cap.get(cv::CAP_PROP_SATURATION));     // Saturation of the image (only for cameras).
+    console(MODULE " HUE:           %f\n", cap.get(cv::CAP_PROP_HUE));            // Hue of the image (only for cameras).
+    console(MODULE " GAIN:          %f\n", cap.get(cv::CAP_PROP_GAIN));           // Gain of the image (only for cameras).
+    console(MODULE " EXPOSURE:      %f\n", cap.get(cv::CAP_PROP_EXPOSURE));       // Exposure (only for cameras).
+    console(MODULE " EXPOSURE: %f\n", cap.get(cv::CAP_PROP_AUTO_EXPOSURE));       // Exposure (only for cameras).
+    console(MODULE " CONVERT_RGB:   %f\n", cap.get(cv::CAP_PROP_CONVERT_RGB));    // Boolean flags indicating whether images should be converted to RGB.
 
-
-
-    //namedWindow("camera Main", 0 );
-    //setMouseCallback( "camera Main", onMouse, &image );
-
-    //#define DEBUG_HS//
-    // #ifdef DEBUG_HSV
     if(calibrate_hsv)
     {
         createTrackbar( "Hmin", "camera Main", &h_min, 255, 0 );
@@ -149,8 +137,6 @@ void Camera::init_thread()
         createTrackbar( "Vmax", "camera Main", &v_max, 255, 0 );
     }
 
-    //#define DEBUG_RGB
-    //#ifdef DEBUG_RGB
     if(calibrate_rgb)
     {
         createTrackbar( "Rmin", "camera Main", &r_min, 255, 0 );
@@ -160,7 +146,6 @@ void Camera::init_thread()
         createTrackbar( "Bmin", "camera Main", &b_min, 255, 0 );
         createTrackbar( "Bmax", "camera Main", &b_max, 255, 0 );
     }
-    //#endif
 
     running = true;
 }
