@@ -18,7 +18,7 @@
 
 #include "Utility.h"
 
-const unsigned char log_enable = 0;
+//const unsigned char log_enable = 0;
 
 
 /*void log(const char *fmt, ...)

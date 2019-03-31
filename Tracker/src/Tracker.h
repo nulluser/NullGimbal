@@ -22,10 +22,11 @@
 
 #ifdef MODULE_TRACKER
 #define MODULE "[Tracker]  "
-#define MIN_ANGLE_X -45
-#define MAX_ANGLE_X  45
-#define MIN_ANGLE_Y -45
-#define MAX_ANGLE_Y  45
+
+const float MIN_ANGLE_X = -45;
+const float MAX_ANGLE_X =  45;
+const float MIN_ANGLE_Y = -45;
+const float MAX_ANGLE_Y =  45;
 #endif
 
 
@@ -35,34 +36,29 @@ class Config;
 
 class Tracker
 {
-
   public:
 
     Tracker(Main *main, Config *config);
-
     ~Tracker();
 
+    void update(float x, float y);              // Notify track of new object position
 
-    void update(float x, float y);
+    Telemetry get_telemetry();                  // Get current telemetry
 
-    Telemetry get_telemetry();
+    void adjust_gimbal(float x, float y);       // Manually move gimbal
 
+    void toggle_laser(void);                    // Toggle laser
+    void toggle_tracking(void);                 // Toggle auto tracking
 
-    void adjust_gimbal(float x, float y);
-
-    void toggle_laser(void);
-    void toggle_tracking(void);
-
-    void tweak_param(int param, float mult);
-
+    void tweak_param(int param, float mult);    // Tweak a parameter
 
   private:
 
-    void update_angles(float x, float y);
+    void update_angles(float x, float y);       // Compute new gimbal angles
 
-    Main *main;
-    Config *config;
-
+    // Core
+    Main *main;                                 // Main injection
+    Config *config;                             // Config injection
 
     // Object Tracking
     float pos_filt;
@@ -78,12 +74,12 @@ class Tracker
     bool has_target;
 
     // Gimbal Control
+    Gimbal *gimbal;
 
-    //Vec2f angle;
-    //unsigned char laser_state;
+    Control control;            // Local control data source
+    Telemetry telemetry;        // Last telemetry data
 
-
-    float kp_x, ki_x, kd_x;
+    float kp_x, ki_x, kd_x;     // PID settings
     float kp_y, ki_y, kd_y;
 
     float Kvel;
@@ -91,13 +87,8 @@ class Tracker
     PID pid_x;
     PID pid_y;
 
-    // Gimbal
-    Gimbal *gimbal;
-
-    Control control;            // Local control data source
-    Telemetry telemetry;        // Last telemetry data
-
-    bool tracking;
+    // General
+    bool tracking;              // True if tracking
 
 };
 

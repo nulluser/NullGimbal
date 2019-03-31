@@ -11,12 +11,8 @@
 #define CAMERA_H
 
 #include <windows.h>
-
 #include <opencv2/core/utility.hpp>
-#include "opencv2/video/tracking.hpp"
-#include "opencv2/imgproc.hpp"
-#include "opencv2/videoio.hpp"
-#include "opencv2/highgui.hpp"
+#include <opencv2/videoio.hpp>
 
 #include <iostream>
 #include <ctype.h>
@@ -24,13 +20,12 @@
 #include "PID.h"
 
 #ifdef MODULE_CAMERA
-#define MODULE "[Camera]   "
-#define CFG_NAME    "camera"
-//#define CAPTURE_X   800
-//#define CAPTURE_Y   600
-DWORD WINAPI CAMERA_thread(LPVOID lpParameter);
-#endif
 
+#define MODULE "[Camera]   "
+
+const char CFG_NAME[] = "camera";
+
+#endif
 
 class Main;
 class Config;
@@ -38,7 +33,6 @@ class Gimbal;
 
 class Camera
 {
-
   public:
 
     Camera(Main *m, Config *c);
@@ -49,11 +43,8 @@ class Camera
     void draw_image(HDC dc, int x_size, int y_size);
     void set_selection(float x1, float y1, float x2, float y2);
 
-
     bool get_target(float &f, float &y, float &r);
-
     void draw_circle(float x, float y, float r, unsigned char cr, unsigned char cg, unsigned char cb);
-
 
   private:
 
@@ -68,10 +59,8 @@ class Camera
 
     void update_angles(cv::Mat &source);
 
-
     void init_thread(void);
     static DWORD WINAPI camera_thread(LPVOID lpParameter);
-
 
     Main *main;
     Config *config;
@@ -107,12 +96,10 @@ class Camera
 
     float min_radius;
 
-
     // Config Options
     int autofocus;
     int capture_x;
     int capture_y;
-
 
     CRITICAL_SECTION image_cs;
 
@@ -121,7 +108,6 @@ class Camera
 
     bool calibrate_rgb;
     bool calibrate_hsv;
-
 
     cv::Rect selection;
     bool selection_valid;

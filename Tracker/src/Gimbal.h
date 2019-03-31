@@ -16,9 +16,6 @@
 #define MODULE "[Gimbal]   "
 #define CFG_NAME "gimbal"
 
-//const char SERIAL_PORT[]  =   "COM33";
-//const unsigned int SERIAL_BAUD = 115200;
-
 const unsigned char GIMBAL_RX_LEN  = 12;
 const unsigned char GIMBAL_TX_LEN  = 8;
 const unsigned int UPDATE_WAIT  = 100;

@@ -21,14 +21,12 @@ using namespace std;
     Interface
 */
 
-
-
+// Config constructor
 Config::Config(const char *filename): filename(filename)
 {
     loadConfig();
     showConfig();
 }
-
 
 /* Load config file */
 bool Config::loadConfig(void)

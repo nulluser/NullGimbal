@@ -1204,7 +1204,7 @@
 
 1554053578 c:\users\nulluser\desktop\brushless gimbal\source\gimbaltracker\tracker\src\types.h
 
-1554073381 source:c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\config.cpp
+1554074077 source:c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\config.cpp
 	<fstream>
 	<algorithm>
 	"Config.h"
@@ -1214,7 +1214,7 @@
 	<string>
 	<vector>
 
-1554073152 c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\utility.h
+1554074232 c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\utility.h
 	<windows.h>
 
 1554070889 source:c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\gimbal.cpp
@@ -1229,7 +1229,7 @@
 
 1554050428 c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\serial.h
 
-1554070889 c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\gimbal.h
+1554074082 c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\gimbal.h
 	<windows.h>
 	"Types.h"
 
@@ -1252,7 +1252,7 @@
 	"Main.h"
 	"Gimbal.h"
 
-1554073152 c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\tracker.h
+1554073979 c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\tracker.h
 	<windows.h>
 	<iostream>
 	<ctype.h>
@@ -1260,11 +1260,11 @@
 	"PID.h"
 	"Gimbal.h"
 
-1554073013 c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\main.h
+1554073843 c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\main.h
 	<windows.h>
 	"utility.h"
 
-1554073152 source:c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\utility.cpp
+1554074213 source:c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\utility.cpp
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -1272,7 +1272,7 @@
 	<math.h>
 	"Utility.h"
 
-1554072983 source:c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\camera.cpp
+1554073676 source:c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\camera.cpp
 	<windows.h>
 	<opencv2/core/utility.hpp>
 	"opencv2/video/tracking.hpp"
@@ -1285,18 +1285,15 @@
 	"Main.h"
 	"Gimbal.h"
 
-1554073381 c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\camera.h
+1554074345 c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\camera.h
 	<windows.h>
 	<opencv2/core/utility.hpp>
-	"opencv2/video/tracking.hpp"
-	"opencv2/imgproc.hpp"
-	"opencv2/videoio.hpp"
-	"opencv2/highgui.hpp"
+	<opencv2/videoio.hpp>
 	<iostream>
 	<ctype.h>
 	"PID.h"
 
-1554073063 source:c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\main.cpp
+1554073664 source:c:\users\nulluser\desktop\brushless gimbal\source\nullgimbal\tracker\src\main.cpp
 	<windows.h>
 	<windowsx.h>
 	<stdio.h>

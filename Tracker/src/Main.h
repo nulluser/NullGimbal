@@ -22,8 +22,7 @@
 
 #define MODULE "[Main]     "
 
-#define CONFIG_FILENAME "Tracker.cfg"
-
+const char CONFIG_FILENAME[]  = "Tracker.cfg";
 
 const char PROG_NAME[] = "Gimbal Tracker (C) 2019 nulluser@gmail.com";
 const char CLASS_NAME[] = "CGimTrk";
@@ -31,7 +30,6 @@ const char CLASS_NAME[] = "CGimTrk";
 const int ID_UTIMER = 1;
 const int ID_KEYS = 2;
 const int ID_STIMER = 3;
-
 
 const int WM_UPDATE = WM_APP + 1;
 
